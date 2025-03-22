@@ -1,0 +1,22 @@
+@use './reset';
+@use './variables' as v;
+@use './mixins' as m;
+
+
+*{
+    box-sizing: border-box;
+    font-family: v.$main-font;
+}
+
+h2{
+    color: v.$color-JapaneseIndigo;
+    font-size: v.$font-size-xl;
+    line-height: 48px;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 15px;
+    width: 100%;
+}

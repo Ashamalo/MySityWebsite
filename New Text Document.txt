@@ -1,0 +1,83 @@
+# Документація до проекту "We are real WEB-DEVELOPERS"
+
+## Опис проекту
+Веб-сайт для демонстрації навичок веб-розробки з адаптивним дизайном. Основні секції:
+- **Шапка** з навігацією (десктопна та мобільна версії).
+- **Герой-блок** з кнопками та фоновими ефектами.
+- **Галерея навичок** з CSS Grid.
+- **Форма підписки** та секція з постами.
+- **Адаптивний дизайн** для різних розмірів екрану (до 576px).
+
+---
+
+## Особливості реалізації
+### Технології
+- **HTML5**, **CSS3** (з використанням CSS Grid, Flexbox).
+- **SCSS** для структуризації стилів.
+- **Медіазапити** для адаптації під мобільні пристрої.
+- **Font Awesome** для іконок.
+
+### Структура SCSS
+- **Компонентний підхід**: стилі розділені на файли (`header.scss`, `gallery.scss` тощо).
+- **Змінні та міксини**: використано файли `_variables.scss` та `_mixins.scss`.
+- **Важливий нюанс**: 
+  - Медіазапити підключено **останніми** у головному файлі `index.scss`, щоб перевизначити основні стилі.
+  - Використано міксин `respond-to` для генерації медіазапитів.
+
+### Виправлені проблеми
+- **Порядок підключення файлів**: у `index.scss` файл `_media.scss` імпортовано після всіх компонентів, щоб медіазапити коректно застосовувалися.
+
+---
+
+## Інструкції для запуску
+### 1. Вимоги
+- Браузер (наприклад, Chrome, Firefox).
+- Редактор коду (VS Code, Sublime Text).
+- **SASS** (для компіляції SCSS у CSS).
+
+### 2. Встановлення SASS
+Якщо SASS не встановлено:
+```bash
+npm install -g sass
+
+
+# Project Documentation: "We are real WEB-DEVELOPERS"
+
+## Project Overview
+A responsive website showcasing web development skills. Key sections include:
+- **Header** with desktop and mobile navigation.
+- **Intro block** with buttons and overlay effects.
+- **Skills gallery** using CSS Grid.
+- **Subscription form** and posts section.
+- **Responsive design** for screen sizes down to 576px.
+
+---
+
+## Implementation Features
+### Technologies
+- **HTML5**, **CSS3** (using CSS Grid and Flexbox).
+- **SCSS** for styling architecture.
+- **Media queries** for mobile adaptation.
+- **Font Awesome** for icons.
+
+### SCSS Structure
+- **Component-based approach**: Styles split into files (`header.scss`, `gallery.scss`, etc.).
+- **Variables and mixins**: Utilized `_variables.scss` and `_mixins.scss`.
+- **Critical implementation detail**:
+  - `respond-to` mixin used for generating media queries.
+
+### Resolved Issues
+- **File import order**: In `index.scss`, `_media.scss` is imported after all components to ensure media queries apply correctly.
+
+---
+
+## Setup Instructions
+### 1. Requirements
+- Modern browser (Chrome, Firefox, etc.).
+- Code editor (VS Code, Sublime Text).
+- **SASS** (to compile SCSS to CSS).
+
+### 2. Install SASS
+If SASS is not installed:
+```bash
+npm install -g sass

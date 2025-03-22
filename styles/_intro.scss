@@ -1,0 +1,61 @@
+@use './reset';
+@use './variables' as v;
+@use './mixins' as m;
+@use './basis';
+
+.intro-block {
+    background-image: url(../images/img-header.jpg);
+    padding: 250px 0;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    background-repeat: no-repeat;
+
+    &:after{
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: v.$color-overlay;
+        top: 0;
+        right: 0;
+    }
+     
+    .intro-heading{
+        color: v.$color-white;
+        font-size: v.$font-size-xxl;
+        text-align: center;
+        font-family: v.$header-font;
+        font-weight: 200;
+        position: relative;
+        z-index: 2;
+    }
+
+    .intro-btn-block{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 50px;
+        position: relative;
+        z-index: 3;
+
+        button{
+            width: v.$button-width;
+            height: v.$button-height;
+            margin: 0 10px;
+            background-color: v.$color-button-hover;
+            color: v.$color-white;
+            border: 2px solid v.$color-white;
+            font-size: v.$font-size-m;
+            cursor: pointer;
+
+            &:hover{
+                background: v.$color-Chocolate;
+                border: 2px solid v.$color-white;
+                transition: v.$transition-default;
+            }
+        }
+    }
+}

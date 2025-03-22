@@ -1,0 +1,47 @@
+@use './reset';
+@use './variables' as v;
+@use './mixins' as m;
+@use './basis';
+
+.lets-start-container{
+    background-color: v.$color-platinum;
+
+    .lets-start-flx{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .lets-start-content{
+        width: 946px;
+        padding: 35px 50px 87px;
+        position: relative;   
+        
+        &::after{
+            content:"";
+            height: 200px;
+            width: 2px;
+            top: 230px;
+            right: 0;
+            background-color: v.$color-border;
+            position: absolute;
+        }
+    }
+
+    .lets-start-header{
+        width: 354px;
+        padding: 50px 10px 45px 0;
+        font-size: 40px;
+        line-height: normal;
+    }
+
+    p{
+        color: v.$color-AuroMetalSaurus;
+        padding: 5px 0;
+    }
+    
+    .lets-start-img{
+        width: 271px;
+        padding: 80px 0 60px 40px;
+    }
+}

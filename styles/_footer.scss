@@ -1,0 +1,41 @@
+@use './reset';
+@use './variables' as v;
+@use './mixins' as m;
+@use './basis';
+
+.footer-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 20px;
+    padding: 143px 0 67px;
+    
+    &::before{
+        content:"";
+        height: 2px;
+        width: 75px;
+        bottom: 30px;
+        background-color: v.$color-white;
+        position: relative;            
+    }
+    
+    div:nth-child(1){
+        color: v.$color-AuroMetalSaurus;
+        font-family: v.$main-font;
+        font-weight: 100;
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 0.23rem;
+        text-align: center;
+    }
+
+    div:nth-child(2){
+        color: v.$color-white;
+        font-family: v.$main-font;
+        font-weight: 700;
+        font-size: 16px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}

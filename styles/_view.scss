@@ -1,0 +1,20 @@
+@use './reset';
+@use './variables' as v;
+@use './mixins' as m;
+@use './basis';
+
+.view-container{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 25px;
+ 
+    .btn-view-all{
+     @include m.button-style(
+         rgba(45, 54, 81, 0.8), 
+         v.$color-JapaneseIndigo, 
+         v.$color-white,
+         v.$color-Chocolate
+     );
+     }
+ }

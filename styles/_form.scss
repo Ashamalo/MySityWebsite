@@ -1,0 +1,47 @@
+@use './reset';
+@use './variables' as v;
+@use './mixins' as m;
+@use './basis';
+
+.dark-bg{
+    background-color: v.$color-JapaneseIndigo;
+}
+
+.form-container{
+
+    @include m.grid-container(
+        repeat(3, calc((100% - 40px - 30px) / 3)), 
+        none
+    );
+
+    gap: v.$basic-gap;
+
+    input, button{
+        border: none;
+        border-bottom: 2px solid v.$color-white;
+        background: lighten(v.$color-JapaneseIndigo, 7%);
+        opacity: 0.9;
+        padding: 10px 0 10px 0;
+        color: v.$color-white;
+        font-size: 16px;
+        transition: v.$transition-default;
+       }
+
+    input::placeholder{
+        color: v.$color-white;
+        font-size: 16px;
+    }
+
+    input{
+        padding-left: 20px;
+    }
+
+    button:hover, input:focus, input:active{
+        outline: none;
+        border: 2px solid v.$color-white;
+    }
+
+    button:hover, button:active{
+        background-color: v.$color-Chocolate;
+    }
+}
