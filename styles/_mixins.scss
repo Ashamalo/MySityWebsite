@@ -31,3 +31,18 @@
         background: $hover-bg;
     }
 }
+
+@mixin overlay($opacity: 0.5) {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(45, 45, 81, 0.5);
+    z-index: 1;
+  }
+}

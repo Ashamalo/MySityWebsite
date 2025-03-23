@@ -262,6 +262,11 @@
  }
 
  @include m.respond-to(small-mobile){
+    .intro-block{
+    .intro-btn-block button{
+        font-size: 14px;
+        }
+    }
     .view-container .btn-view-all{
         width: 100%;
     }

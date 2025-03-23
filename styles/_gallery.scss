@@ -3,52 +3,45 @@
 @use './mixins' as m;
 @use './basis';
 
-.section-gallery{
+.section-gallery {
     @include m.grid-container(
-        repeat(4, calc((100% - 40px) / 4)), 
-        repeat(3, 350px)
+      repeat(4, calc((100% - 40px) / 4)),
+      repeat(3, 350px),
+      8px
     );
-
-    gap: v.$gap-s;
     padding: 10px;
-
-    div{
-        font-family: Roboto;
-        font-weight: 700;
-        font-size: 20px;
-        letter-spacing: .1rem;
-        color: v.$color-white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    background-size: cover;
+    background-position: center;
+    grid-auto-flow: row;
+  
+    div {
+      font-family: v.$main-font;
+      font-weight: 700;
+      font-size: 20px;
+      letter-spacing: 0.1rem;
+      color: v.$color-white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: 0.3s ease-in;
+  
+      p {
         position: relative;
-        background-repeat: no-repeat;
-        background-size: cover;
-
-        p{
-            position: relative;
-            z-index: 2;
+        z-index: 2;
+      }
+  
+      &:hover {
+        color: v.$color-Chocolate;
+  
+        &::after {
+          background: rgba(45, 45, 81, 0.7);
         }
-
-        &:hover{
-            color: v.$color-Chocolate;
-
-            &::after{
-                background: v.$color-overlay;
-            }
-        }
-
-        transition: v.$transition-default;
-
-        &:after{
-            content: "";
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            background: rgba(45,45,81, .5);
-            top: 0;
-            right: 0;
-        }
+      }
+  
+      @include m.overlay(rgba(45, 45, 81, 0.5));
     }
 
     div:nth-child(1){
